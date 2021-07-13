@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "antd",
+        "iobj",
+        "ts"
+    ],
+    "eslint.workingDirectories": [
+        {
+            "pattern": "./packages/*/"
+        }
+    ],
+    "eslint.options": {
+        "configFile": "./.eslintrc.js"
+    },
+}

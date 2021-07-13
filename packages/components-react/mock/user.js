@@ -1,12 +1,9 @@
-function getFakeCaptcha(req, res) {
-  return res.json('captcha-xxx');
-} // 代码中会兼容本地 service mock 以及部署站点的静态数据
-
+// 代码中会兼容本地 service mock 以及部署站点的静态数据
 export default {
   // 支持值为 Object 和 Array
   'GET /api/currentUser': {
     name: 'Serati Ma',
-    avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
+    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
     userid: '00000001',
     email: 'antdesign@alipay.com',
     signature: '海纳百川，有容乃大',
@@ -39,7 +36,6 @@ export default {
       },
     ],
     notifyCount: 12,
-    unreadCount: 11,
     country: 'China',
     geographic: {
       province: {
@@ -77,8 +73,7 @@ export default {
   ],
   'POST /api/login/account': (req, res) => {
     const { password, userName, type } = req.body;
-
-    if (password === 'ant.design' && userName === 'admin') {
+    if (password === '888888' && userName === 'admin') {
       res.send({
         status: 'ok',
         type,
@@ -86,8 +81,7 @@ export default {
       });
       return;
     }
-
-    if (password === 'ant.design' && userName === 'user') {
+    if (password === '123456' && userName === 'user') {
       res.send({
         status: 'ok',
         type,
@@ -95,7 +89,6 @@ export default {
       });
       return;
     }
-
     res.send({
       status: 'error',
       type,
@@ -103,10 +96,7 @@ export default {
     });
   },
   'POST /api/register': (req, res) => {
-    res.send({
-      status: 'ok',
-      currentAuthority: 'user',
-    });
+    res.send({ status: 'ok', currentAuthority: 'user' });
   },
   'GET /api/500': (req, res) => {
     res.status(500).send({
@@ -144,5 +134,4 @@ export default {
       path: '/base/category/list',
     });
   },
-  'GET  /api/login/captcha': getFakeCaptcha,
 };

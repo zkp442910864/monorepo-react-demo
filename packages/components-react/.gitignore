@@ -20,21 +20,20 @@ yarn-error.log
 yarn.lock
 package-lock.json
 *bak
+jsconfig.json
 .vscode
 
 # visual studio code
 .history
 *.log
-functions/*
+
+functions/mock
 .temp/**
 
 # umi
 .umi
 .umi-production
+.temp
 
 # screenshot
 screenshot
-.firebase
-.eslintcache
-
-build
