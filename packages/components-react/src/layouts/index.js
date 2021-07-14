@@ -8,7 +8,6 @@ const {Content} = Layout;
 
 class BasicLayout extends React.PureComponent {
 
-
     render () {
 
         const {
