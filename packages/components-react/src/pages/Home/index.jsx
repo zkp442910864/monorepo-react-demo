@@ -15,7 +15,7 @@ const Main = () => {
                 trueValue={1}
                 falseValue={2}
             >
-                123123
+                {checkboxVal}
             </MyCheckbox>
         </div>
     );
