@@ -14,8 +14,13 @@
 		"@storybook/react": "^6.3.2",
 		"babel-loader": "^8.2.2"
     },
-    "workspaces": [
-        "packages/*",
-        "projects/*"
-    ]
+    "workspaces": {
+        "packages": [
+            "packages/*",
+            "projects/*"
+        ],
+        "nohoist": [
+            "**/common-utils/**"
+        ]
+    }
 }
