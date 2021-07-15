@@ -2,14 +2,12 @@
     "cSpell.words": [
         "antd",
         "iobj",
+        "nohoist",
         "ts"
     ],
     "eslint.workingDirectories": [
         {
             "pattern": "./packages/*/"
         }
-    ],
-    "eslint.options": {
-        "configFile": "./.eslintrc.js"
-    },
+    ]
 }
